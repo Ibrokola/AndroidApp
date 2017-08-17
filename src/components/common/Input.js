@@ -8,9 +8,10 @@ const Input = ({ label, value, onChangeText }) => {
         <View style={containerStyle}> 
            <Text style={labelStyle}>{label}</Text>
            <TextInput 
+                autoCorrect={false}
+                style={inputStyle}
                 value={value}
                 onChangeText={onChangeText}
-                style={{ height: 20, width: 100 }}
            />
         </View>  
     );
@@ -34,8 +35,8 @@ const styles = {
         height: 40,
         flex: 1,
         flexDirection: 'row',
-        align: 'center'
-    }, 
+        alignItems: 'center'
+    } 
 };
 
 export { Input };
